@@ -94,7 +94,7 @@ public class GameRecorder {
             throw new RuntimeException("prepareEncoder called twice?");
         }
 
-        mOutputFile = new File(context.getFilesDir(), "video.mp4");
+        mOutputFile = new File(context.getExternalFilesDir("test"), "video.mp4");
         Log.d(TAG, "Video recording to file " + mOutputFile);
         mBufferInfo = new MediaCodec.BufferInfo();
 
